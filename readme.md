@@ -10,14 +10,15 @@
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-project-name.git
-Use code with caution. Learn more
-Install dependencies:
+git clone https://github.com/suyash200/Author-Assignment.git
+cd ./Author-Assignment
 ```
+
+Install dependencies:
 
 ```bash
 npm install
-Use code with caution. Learn more
+
 ```
 
 Create a .env file:
