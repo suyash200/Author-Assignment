@@ -55,8 +55,8 @@ export async function GetYourInfo(req: Request, res: Response) {
 }
 export async function CreateAuthor(req: Request, res: Response) {
   try {
-    const z = await PasswordHash(req.body.password);
-    req.body.password = z;
+    const hashedPassword = await PasswordHash(req.body.password);
+    req.body.password = hashedPassword;
     const insertNewAuthor = await Author.create({
       ...req.body,
     });
@@ -75,7 +75,7 @@ export async function EditAuthor(req: Request, res: Response) {
         id: id,
       },
     });
-    console.log(insertNewAuthor);
+   ;
 
     res.status(200).send("updated author");
   } catch (error) {
@@ -100,7 +100,7 @@ export async function GetAuthor(req: Request, res: Response) {
         .send({ ...AuthorFinder.toJSON(), books: writtenBooks[0] });
     }
   } catch (error) {
-    console.log(error);
+
     res.status(500).send("Internal Error");
   }
 }
@@ -113,7 +113,7 @@ export async function DeleteAuthor(req: Request, res: Response) {
         authorId: id,
       },
     });
-    const AuthorFinder = await Author.destroy({
+     await Author.destroy({
       where: {
         id: id,
       },
@@ -121,7 +121,7 @@ export async function DeleteAuthor(req: Request, res: Response) {
 
     res.status(200).send("author Deleted");
   } catch (error) {
-    console.log(error);
+
     res.status(500).send("Internal Error");
   }
 }

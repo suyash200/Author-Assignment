@@ -12,7 +12,7 @@ export async function Login(req: Request, res: Response) {
       },
     });
 
-    const passwordCheck = await PassowrdCompare(
+    const passwordCheck = await PassowrdCompare( 
       password,
       authorFinder?.getDataValue("password")
     );
@@ -23,7 +23,7 @@ export async function Login(req: Request, res: Response) {
         })
       : res.status(401).send("wrong password");
   } catch (error) {
-    console.log(error);
+
     res.status(500).send("internal error");
   }
 }
