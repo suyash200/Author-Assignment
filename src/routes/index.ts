@@ -8,6 +8,6 @@ const router = Router();
 router.post("/auth/login", Login);
 router.use("/author",AuthorRoute);
 
-router.use("/books", BooksRoute);
+router.use("/logged-in/books", BooksRoute);
 
 export default router;
