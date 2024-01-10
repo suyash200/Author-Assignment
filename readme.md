@@ -1,5 +1,10 @@
 # README
 
+## Server Architecture
+
+![image](/serverArch.png)
+[Link](/serverArch.png)
+
 ## Project Setup
 
 Clone the repository:
@@ -89,4 +94,5 @@ Unique likes per user
 
 ## Postman
 
+link for postman workspace
 [PostMan](https://www.postman.com/inmyevent/workspace/authorcrud/collection/25009364-aa3a1553-5dc5-4969-a427-0e266e06595b?action=share&creator=25009364)
