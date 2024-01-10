@@ -21,6 +21,7 @@ npm install
 
 ```
 
+```bash
 Create a .env file:
 
 database=authorCrud
@@ -28,6 +29,7 @@ Db_Name=postgres
 Db_Password=your_database_password
 Db_Host=your_database_host
 Jwt_Secret=your_jwt_secret
+```
 
 ## Database Setup
 
