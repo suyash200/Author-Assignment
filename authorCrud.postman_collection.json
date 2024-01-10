@@ -1,0 +1,346 @@
+{
+  "info": {
+    "_postman_id": "aa3a1553-5dc5-4969-a427-0e266e06595b",
+    "name": "authorCrud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25009364"
+  },
+  "item": [
+    {
+      "name": "author",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbm9oYXJAZ21pYWwuY29tIiwiaWF0IjoxNzA0ODE3ODU5LCJleHAiOjE3MDQ5MDQyNTl9.YVGGX95NUqDgFxOjPo87edi9VYQDs1IBn1AHUOqO4J8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "Diana7@outlook.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "root",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "addAuthor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "Manohar ",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "manohar@gmia.com",
+                  "type": "text"
+                },
+                {
+                  "key": "phone_no",
+                  "value": "112",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "ROOT",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:4000/author/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["author", "add"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getME",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/author/me",
+              "host": ["{{baseUrl}}"],
+              "path": ["author", "me"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllAuthors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/author/",
+              "host": ["{{baseUrl}}"],
+              "path": ["author", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAuthor",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/author/2",
+              "host": ["{{baseUrl}}"],
+              "path": ["author", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "editAuthor",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteAuthor",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/author/delete/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["author", "delete", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "books",
+      "item": [
+        {
+          "name": "createbooks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbm9oYXJAZ21pYWwuY29tIiwiaWF0IjoxNzA0ODE3ODU5LCJleHAiOjE3MDQ5MDQyNTl9.YVGGX95NUqDgFxOjPo87edi9VYQDs1IBn1AHUOqO4J8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "hell on earth",
+                  "type": "text"
+                },
+                {
+                  "key": "likes ",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "authorId",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:4000/books/createBooks",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["books", "createBooks"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "like",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/books/like/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["books", "like", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllBooks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbm9oYXJAZ21pYS5jb20iLCJpYXQiOjE3MDQ4MjIzMjcsImV4cCI6MTcwNDkwODcyN30.p9mnZYj-XeWAPu0rrpVLqRuDgYEs5sTh2-W3MB74GO4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/books/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["books", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "unlike",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/books/unlike/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["books", "unlike", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "edit books",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "hellow world nice to meet u",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/books/edit/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["books", "edit", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteBook",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/books/delete/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["books", "delete", "1"]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkRpYW5hN0BvdXRsb29rLmNvbSIsImlhdCI6MTcwNDg4MzA0MSwiZXhwIjoxNzA0OTY5NDQxfQ.eDGqiuqRoaCXGpo2OPVPcqkWtQO9_hydUDkoOpK-9kk",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [""]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [""]
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:4000",
+      "type": "string"
+    }
+  ]
+}
